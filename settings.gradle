@@ -1,0 +1,9 @@
+include ':app',
+        ':HDCommon:app',':HDCommon:libAnnotations',':HDCommon:libKAPT',
+        ':HDDiscovery:app',
+        ':HDHome:app',
+        ':HDLive:app',
+        ':HDMall:app',
+        ':HDUser:app'
+
+rootProject.name = "AsmStore"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--代表外部存储区域的根目录下的文件 Environment.getExternalStorageDirectory()/DCIM/camerademo目录-->
+    <external-path name="hd_DCIM" path="DCIM/" />
+    <external-path name="hd_DCIM" path="DCIM/HDStore/cliped/" />
+    <external-path name="hd_DCIM" path="HaoDa/" />
+    <!--代表外部存储区域的根目录下的文件 Environment.getExternalStorageDirectory()/Pictures/camerademo目录-->
+    <external-path name="hd_Pictures" path="Pictures/" />
+    <!--代表app 私有的存储区域 Context.getFilesDir()目录下的images目录 /data/user/0/com.hd.camerademo/files/images-->
+    <files-path name="hd_private_files" path="images" />
+    <files-path name="hd_private_files" path="*.apk" />
+    <!--代表根目录-->
+    <root-path path="" name="camera_photos" />
+    <!--代表app 私有的存储区域 Context.getCacheDir()目录下的images目录 /data/user/0/com.hd.camerademo/cache/images-->
+    <cache-path name="hd_private_cache" path="images" />
+    <!--代表app 外部存储区域根目录下的文件 Context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)目录下的Pictures目录-->
+    <!--/storage/emulated/0/Android/data/com.hd.camerademo/files/Pictures-->
+    <external-files-path name="hd_external_files" path="Pictures" />
+    <!--代表app 外部存储区域根目录下的文件 Context.getExternalCacheDir目录下的images目录-->
+    <!--/storage/emulated/0/Android/data/com.hd.camerademo/cache/images-->
+    <!--<external-cache-path name="hd_external_cache" path="" />-->
+</paths>

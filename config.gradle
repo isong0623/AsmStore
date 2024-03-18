@@ -1,0 +1,71 @@
+def  buildVersionCode = (int)((System.currentTimeMillis() - 946656000000L )/ 1000L)
+def buildTime() { return new Date().format("YY_MM_dd_HH_mm_ss", TimeZone.getTimeZone("Asia/Shanghai")) }
+
+ext {
+    def buildVersionName = "1.1.12"
+
+    buildconfig = [
+        isBuildApplication = rootProject.projectDir.getName().contains("AsmStore")
+    ]
+
+    android = [
+                                applicationId : "com.haoda.store",
+                            compileSdkVersion : 29,
+                                minSdkVersion : 19,
+                             targetSdkVersion : 29,
+                                  versionName : buildVersionName,
+                                  versionCode : buildVersionCode,
+                            buildToolsVersion : "29.0.2",
+
+                        renderscriptTargetApi : 18,
+               renderscriptSupportModeEnabled : false,
+            vectorDrawables_useSupportLibrary : false,
+
+                           buildApkNameFormat : "HDStore_v${buildVersionName}_%s_${buildTime()}_${buildVersionCode}.apk"
+    ]
+
+    def retrofit_version = "2.3.0"
+    dependencies = [
+            //test
+                                   junit : "junit:junit:4.12",
+                                junitext :'androidx.test.ext:junit:1.1.2',
+                                espresso :'androidx.test.espresso:espresso-core:3.3.0',
+            //google
+                               appcompat : "androidx.appcompat:appcompat:1.2.0",
+                        constraintLayout : "androidx.constraintlayout:constraintlayout:2.0.2",
+                                material : "com.google.android.material:material:1.1.0",
+                            recyclerview : "androidx.recyclerview:recyclerview:1.1.0",
+                                cardview : "androidx.cardview:cardview:1.0.0",
+                                multidex : "androidx.multidex:multidex:2.0.1",
+            //kotlin
+                                  kotlin : "org.jetbrains.kotlin:kotlin-stdlib:1.4.10",
+                      kotlinx_coroutines : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0",
+            //network
+                                retrofit : "com.squareup.retrofit2:retrofit:${retrofit_version}",
+              retrofit_converter_scalers : "com.squareup.retrofit2:converter-scalars:${retrofit_version}",
+                 retrofit_converter_gson : "com.squareup.retrofit2:converter-gson:${retrofit_version}",
+              retrofit_converter_adapter : "com.squareup.retrofit2:adapter-rxjava2:${retrofit_version}",
+                    retrofit_interceptor : "com.squareup.okhttp3:logging-interceptor:3.8.1",
+
+                                 rxJava2 : "io.reactivex.rxjava2:rxjava:2.1.0",
+                              rxAndroid2 : "io.reactivex.rxjava2:rxandroid:2.0.1",
+
+                             butterknife : "com.jakewharton:butterknife:10.2.1",
+
+            // SmartRefresh
+                   refresh_layout_kernel : 'com.scwang.smart:refresh-layout-kernel:2.0.1',      //核心必须依赖
+                   refresh_layout_header : 'com.scwang.smart:refresh-header-material:2.0.1',    //谷歌刷新头
+                   refresh_layout_footer : 'com.scwang.smart:refresh-footer-ball:2.0.1',        //球脉冲加载
+            //
+                                   glide : "com.github.bumptech.glide:glide:4.9.0",
+                       glide_integration : "com.github.bumptech.glide:okhttp3-integration:4.0.0-RC1",
+                                     gif : "pl.droidsonroids.gif:android-gif-drawable:1.2.21",
+                           shadow_layout : "com.github.lihangleo2:ShadowLayout:3.1.4",
+
+                                    xlog : "com.elvishew:xlog:1.7.0"
+    ]
+
+    local = [
+            aliPaySDK : ""
+    ]
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TRecyclerView">
+        <attr name="isReverse" format="boolean" />
+        <attr name="isRefreshable" format="boolean" />
+        <attr name="needHint" format="boolean" />
+        <attr name="itemType" format="reference" />
+        <attr name="headType" format="reference" />
+        <attr name="footType" format="reference" />
+    </declare-styleable>
+
+    <attr name="backgroundCard" format="color" />
+    <attr name="textColor" format="color" />
+    <attr name="textColorBg" format="color" />
+    <attr name="themeType" format="string" />
+    <attr name="themeIcon" format="reference" />
+    <attr name="colorWhite" format="color" />
+
+    <declare-styleable name="TitleBarView">
+        <attr name="l_img" format="reference"/>
+        <attr name="c_img" format="reference"/>
+        <attr name="r_img" format="reference"/>
+        <attr name="l_tv_text" format="string"/>
+        <attr name="c_tv_text" format="string"/>
+        <attr name="r_tv_text" format="string"/>
+        <attr name="l_tv_text_size" format="dimension"/>
+        <attr name="c_tv_text_size" format="dimension"/>
+        <attr name="r_tv_text_size" format="dimension"/>
+        <attr name="l_tv_text_color" format="string|reference"/>
+        <attr name="c_tv_text_color" format="string|reference"/>
+        <attr name="r_tv_text_color" format="string|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="HwLoadingView">
+        <!--控件大小-->
+        <attr name="hlv_size" format="dimension" />
+        <!--控件颜色-->
+        <attr name="hlv_color" format="color" />
+        <!--转一圈花费时长-->
+        <attr name="hlv_duration" format="integer"/>
+    </declare-styleable>
+
+    <style name="LoadingDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

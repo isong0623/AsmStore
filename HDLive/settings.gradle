@@ -1,0 +1,11 @@
+include ':app',
+        ':HDCommon:libAnnotations',':HDCommon:libKAPT',':HDCommon:app'
+rootProject.name = "HDLive"
+
+def parentPath = rootProject.projectDir.getName().contains("AsmStore")
+        ? rootProject.projectDir.getAbsolutePath()
+        : rootProject.projectDir.getParentFile().getAbsolutePath()
+
+project(':HDCommon:libAnnotations').projectDir = new File(String.format("%s/HDCommon/libAnnotations",parentPath))
+project(':HDCommon:libKAPT').projectDir = new File(String.format("%s/HDCommon/libKAPT",parentPath))
+project(':HDCommon:app').projectDir = new File(String.format("%s/HDCommon/app",parentPath))
